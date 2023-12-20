@@ -1,7 +1,5 @@
 import java.io.*;
 
-import static com.ibm.dtfj.javacore.parser.j9.section.common.CommonPatternMatchers.equals;
-import static sun.misc.Version.println;
 
 class FilterOrder {
 
