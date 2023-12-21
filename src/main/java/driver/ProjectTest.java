@@ -32,7 +32,7 @@ public class ProjectTest {
         // 设置第二个输入路径和对应的Map处理逻辑及输出类型
         //MultipleInputs.addInputPath(job, new Path("project_data/trade/trade_test.txt"), TextInputFormat.class, TradeMapper.class);
 
-        MultipleInputs.addInputPath(job, new Path("project_data/trade/pm_hq_trade_spot.txt"), TextInputFormat.class, TradeMapper.class);
+        MultipleInputs.addInputPath(job, new Path("project_data/trade/am_hq_trade_spot.txt"), TextInputFormat.class, TradeMapper.class);
         MultipleInputs.addInputPath(job, new Path("project_data/trade/pm_hq_trade_spot.txt"), TextInputFormat.class, TradeMapper.class);
 
         // 设置Reduce处理逻辑及输出类型
