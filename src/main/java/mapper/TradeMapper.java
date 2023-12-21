@@ -53,7 +53,22 @@ public class TradeMapper extends Mapper<LongWritable, Text, Text, Text> {
 
             }
         }
-
+//        0 tradedate
+//        1 OrigTime
+//        2 SendTime
+//        3 recvtime
+//        4 dbtime
+//        5 ChannelNo
+//        6 MDStreamID
+//        7 ApplSeqNum
+//        8 SecurityID
+//        9 SecurityIDSource
+//        10 BidApplSeqNum
+//        11 OfferApplSeqNum
+//        12 Price
+//        13 TradeQty
+//        14 ExecType
+//        15 tradetime
 
     }
 }

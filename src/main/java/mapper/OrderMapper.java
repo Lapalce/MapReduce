@@ -29,4 +29,25 @@ public class OrderMapper extends Mapper<LongWritable, Text, Text, Text>{
         }
 
     }
+//0 tradedate
+//1 OrigTime
+//2 SendTime
+//3 recvtime
+//4 dbtime
+//5 ChannelNo
+//6 MDStreamID
+//7 ApplSeqNum
+//8 SecurityID
+//9 SecurityIDSource
+//10 Price
+//11 OrderQty
+//12 TransactTime
+//13 Side
+//14 OrderType
+//15 ConfirmID
+//16 Contactor
+//17 ContactInfo
+//18 ExpirationDays
+//19 ExpirationType
 }
+
