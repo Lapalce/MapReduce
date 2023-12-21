@@ -20,10 +20,19 @@ public class TradeMapper extends Mapper<LongWritable, Text, Text, Text> {
 //        price = price.substring(0,1);
 //        if (price.charAt(1) == '0')price = price.substring(0);
 //        split[12] = split[12].split(".")[0]+price;
+//        if (split.length!=16){
+//            System.out.println(input);
+//            System.out.println("123123123");
+//            if (split[10].contains(targetIndex)||split[11].contains(targetIndex)) {
+//                System.out.print("abc222");
+//                System.out.println(input);
+//            }
+//        }
         if (split[10].contains(targetIndex)||split[11].contains(targetIndex)) {
             System.out.print("abc222");
             System.out.println(input);
         }
+
         if (split[8].equals(temp)) {
             if (split[10].equals(targetIndex) || split[11].equals(targetIndex)) System.out.print("abc111");
             String timeString = split[15].substring(8, 12);
@@ -32,12 +41,15 @@ public class TradeMapper extends Mapper<LongWritable, Text, Text, Text> {
                 if (split[10].equals("targetIndex") || split[11].equals("targetIndex")) System.out.print("abcd");
                 if (split[14].equals("4")) { //撤单
                     if (split[10].equals("targetIndex") || split[11].equals("targetIndex")) System.out.print("abcdefg");
-                    String ans = "t\t" + "1\t" + split[15];//t 1 tradeTime
+                    String ans = "t\t" + "1\t" + split[15]+"\t" +split[12]+"\t"+split[13]+"\t";//t 1 tradeTime Price TradeQty
+
                     if (split[10].equals("0")) {
+                        ans = ans.concat("2");//代表方向是卖出
                         context.write(new Text(split[11]), new Text(ans));
 
 
                     } else {
+                        ans = ans.concat("1");//代表方向是买入
                         context.write(new Text(split[10]), new Text(ans));
 
 

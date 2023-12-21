@@ -19,7 +19,7 @@ public class OrderMapper extends Mapper<LongWritable, Text, Text, Text>{
             String timeString = split[12].substring(8, 12);
             int time = Integer.parseInt(timeString); // 将字符串转换为整数
             if ((930 <= time && time < 1130) || (1300 <= time && time < 1457)) {
-                    //          o   TransactTime    Price       Size            Side            OrderType
+                //          o   TransactTime    Price       Size            Side            OrderType
                 String ans = "o\t"+split[12]+"\t"+split[10]+"\t"+split[11]+"\t"+split[13]+"\t"+split[14];
                 context.write(new Text((split[7])), new Text(ans));
 
@@ -50,4 +50,3 @@ public class OrderMapper extends Mapper<LongWritable, Text, Text, Text>{
 //18 ExpirationDays
 //19 ExpirationType
 }
-

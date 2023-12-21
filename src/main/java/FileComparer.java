@@ -5,7 +5,7 @@ import java.util.List;
 
 public class FileComparer {
     public static void main(String[] args) {
-        String pathToFile1 = "project_data/前30sOutput.txt"; // 标准答案文件路径
+        String pathToFile1 = "project_data/000001代码在2019-01-02（前30s）的全部单档位标记Output (1).txt"; // 标准答案文件路径
         String pathToFile2 = "output/project/Output.txt"; // 输出文件路径
 
         try {
@@ -25,6 +25,16 @@ public class FileComparer {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+}
+class temp{
+    public static void main(String[] args) throws IOException {
+        String pathToFile1 = "project_data/000001代码在2019-01-02（前30s）的全部单档位标记Output (1).txt";
+        List<String> file1Lines = Files.readAllLines(Paths.get(pathToFile1));
+
+        for (int i = 0; i < file1Lines.size(); i++) {
+
         }
     }
 }
